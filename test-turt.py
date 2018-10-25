@@ -1,6 +1,6 @@
 import turtle
 from random import randint
-from randomColor import * #randname
+# from randomColor import * #randname
 ##
 
 
@@ -61,26 +61,33 @@ screen.screensize(screen_x, screen_y)
 
 
 ## Begin Program -
-equallines(100)
-dtriangle(123)
+#equallines(100)
+#dtriangle(123)
 
 #print(screen_x,' ',screen_y)
 
-equallines(size)
-t.backward(size)
-t.up()
-t.right(90)
-t.forward(20)
-t.left(90)
-t.down()
-t.forward(size)
-
-
-dtriangle(size)
-filledCircle(size)
-filledSquare(size)
+##equallines(size)
+##t.backward(size)
+##t.up()
+##t.right(90)
+##t.forward(20)
+##t.left(90)
+##t.down()
+##t.forward(size)
+##
+##
+##dtriangle(size)
+##filledCircle(size)
+##filledSquare(size)
 
 # Start to dootle
+for i in range(100):
+    t.down()
+    t.forward(1+i)
+    t.right(i+i)
+
+
+
 for i in range(12):
     color = randname()
     t.setpos(180+i,-.5*i)
@@ -93,7 +100,5 @@ for i in range(12):
     t.setheading(90+i)
     filledCircle(11*randint(2,7),color)
 
-for i in range(4):
-    t.forward(1+i)
-    t.right(i)
+
     
